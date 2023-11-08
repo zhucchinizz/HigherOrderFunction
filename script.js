@@ -27,5 +27,15 @@ console.log(answer);
 function sum(acc,curVal){
     return acc+curVal;
 }
-let result=val.reduce(sum);
+let result=vals.reduce(sum);
 console.log(result);
+
+
+function createIncrementer(step){
+    return (add) => {
+        return add+step;
+    }
+}
+let add2=createIncrementer(2)
+let add5=createIncrementer(5)
+console.log(add2(5));
